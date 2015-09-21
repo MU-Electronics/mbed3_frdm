@@ -41,11 +41,11 @@ endfunction()
 set(YOTTA_BUILD_YEAR "2015") # UTC year
 set(YOTTA_BUILD_MONTH "9") # UTC month 1-12
 set(YOTTA_BUILD_DAY "21") # UTC day 1-31
-set(YOTTA_BUILD_HOUR "12") # UTC hour 0-24
-set(YOTTA_BUILD_MINUTE "30") # UTC minute 0-59
-set(YOTTA_BUILD_SECOND "33") # UTC second 0-61
-set(YOTTA_BUILD_UUID "ce5c989f-5f74-42ea-8584-8a6d46bf6c2d") # unique random UUID for each build
-set(YOTTA_BUILD_VCS_ID "69794318a8acb6cec28bd5b81cceb4b5977fd035") # git or mercurial hash
+set(YOTTA_BUILD_HOUR "15") # UTC hour 0-24
+set(YOTTA_BUILD_MINUTE "57") # UTC minute 0-59
+set(YOTTA_BUILD_SECOND "25") # UTC second 0-61
+set(YOTTA_BUILD_UUID "4df20598-3a48-4c57-8644-06e8bda1d6db") # unique random UUID for each build
+set(YOTTA_BUILD_VCS_ID "ecf66779fdcd59897e643a272230a822ad926ec2") # git or mercurial hash
 set(YOTTA_BUILD_VCS_CLEAN "0") # evaluates true if the version control system was clean, otherwise false
 set(TARGET FRDM_K64F_GCC)
 set(TARGET_LIKE_FRDM_K64F_GCC TRUE)

@@ -2,11 +2,17 @@
 #include "mbed/mbed.h"
 
 // Set the output
-DigitalOut output(LED3); //D0
+DigitalOut output(D0);
+DigitalOut led(LED1);
 
 // Pulse the output
 static void pulse(void) {
     output = !output;
+}
+
+// Pulse the LED
+static void ledFlash(void) {
+    led = !led;
 }
 
 /**
@@ -16,7 +22,9 @@ static void pulse(void) {
  */
 void app_start(int, char**) {
     // Attach the pulse method to the internal scheduler
-    minar::Scheduler::postCallback(pulse).period(minar::milliseconds(500));
+    minar::Scheduler::postCallback(pulse).period(minar::milliseconds(1));
+
+    minar::Scheduler::postCallback(ledFlash).period(minar::milliseconds(100));
 }
 
 
