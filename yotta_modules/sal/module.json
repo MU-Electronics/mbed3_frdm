@@ -1,0 +1,34 @@
+{
+  "name": "sal",
+  "version": "0.2.3",
+  "description": "C Socket abstraction layer",
+  "keywords": [],
+  "author": "Brendan Moran <brendan.moran@arm.com>",
+  "repository": {
+    "url": "git@github.com:ARMmbed/mbed-net-socket-abstract.git",
+    "type": "git"
+  },
+  "homepage": "https://github.com/ARMmbed/mbed-net-socket-abstract",
+  "license": "Apache-2",
+  "dependencies": {},
+  "scripts": {
+    "testReporter": [
+      "mbedgt",
+      "--digest",
+      "stdin",
+      "-v",
+      "-V"
+    ]
+  },
+  "targetDependencies": {
+    "lwip": {
+      "sal-stack-lwip": "~0.2.0"
+    },
+    "nanostack": {
+      "mbed-mesh-api": "~0.0.1"
+    },
+    "picotcp": {
+      "mbed-net-picotcp-wrapper": "ARMmbed/mbed-net-picotcp-wrapper"
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "name": "sal-stack-lwip",
+  "version": "0.2.8",
+  "description": "Lightweight IP",
+  "keywords": [
+    "lwip",
+    "network",
+    "sockets"
+  ],
+  "author": "brendan.moran@arm.com",
+  "licenses": [
+    {
+      "url": "https://spdx.org/licenses/Apache-2.0",
+      "type": "Apache-2.0"
+    },
+    {
+      "url": "https://spdx.org/licenses/BSD-3-Clause",
+      "type": "BSD-3-Clause"
+    },
+    {
+      "url": "https://spdx.org/licenses/BSD-4-Clause",
+      "type": "BSD-4-Clause"
+    },
+    {
+      "url": "https://spdx.org/licenses/MIT",
+      "type": "MIT"
+    },
+    {
+      "type": "LicenseRef-bsd-previous.txt"
+    }
+  ],
+  "extraIncludes": [
+    "mbed-net-lwip",
+    "mbed-net-lwip/arch",
+    "mbed-net-lwip/lwip",
+    "mbed-net-lwip/lwip/include",
+    "mbed-net-lwip/lwip/include/ipv4",
+    "mbed-net-lwip/lwip/include/netif"
+  ],
+  "dependencies": {
+    "sal": "~0.2.0"
+  },
+  "targetDependencies": {
+    "k64f": {
+      "sal-driver-lwip-k64f-eth": "~0.1.0",
+      "sal-iface-eth": "~0.1.0"
+    }
+  },
+  "testDependencies": {
+    "mbed-drivers": "~0.6.3"
+  },
+  "scripts": {
+    "testReporter": [
+      "mbedgt",
+      "--digest",
+      "stdin",
+      "-v",
+      "-V"
+    ]
+  }
+}

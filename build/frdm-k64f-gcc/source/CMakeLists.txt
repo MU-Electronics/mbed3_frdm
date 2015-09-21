@@ -23,5 +23,6 @@ yotta_postprocess_target(EXECUTABLE mbed3)
 
 target_link_libraries(mbed3
     mbed-drivers
+    sockets
 )
 

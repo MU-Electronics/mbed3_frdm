@@ -18,7 +18,8 @@
     }
   ],
   "dependencies": {
-    "mbed-drivers": "~0.8.1"
+    "mbed-drivers": "~0.8.1",
+    "sockets": "~0.3.5"
   },
   "bin": "./source"
 }

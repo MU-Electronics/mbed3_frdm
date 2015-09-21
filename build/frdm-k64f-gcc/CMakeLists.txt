@@ -40,11 +40,13 @@ endfunction()
 # set target-defined definitions
 set(YOTTA_BUILD_YEAR "2015") # UTC year
 set(YOTTA_BUILD_MONTH "9") # UTC month 1-12
-set(YOTTA_BUILD_DAY "18") # UTC day 1-31
-set(YOTTA_BUILD_HOUR "16") # UTC hour 0-24
-set(YOTTA_BUILD_MINUTE "43") # UTC minute 0-59
-set(YOTTA_BUILD_SECOND "44") # UTC second 0-61
-set(YOTTA_BUILD_UUID "3ee1e144-b25a-4c22-9722-26ff8d2ef14c") # unique random UUID for each build
+set(YOTTA_BUILD_DAY "19") # UTC day 1-31
+set(YOTTA_BUILD_HOUR "17") # UTC hour 0-24
+set(YOTTA_BUILD_MINUTE "2") # UTC minute 0-59
+set(YOTTA_BUILD_SECOND "0") # UTC second 0-61
+set(YOTTA_BUILD_UUID "315dbe75-f65f-4a10-a7d1-e6c0940c7e93") # unique random UUID for each build
+set(YOTTA_BUILD_VCS_ID "cbf4c5b100cafbe54a7d5dd153287413cabb1163") # git or mercurial hash
+set(YOTTA_BUILD_VCS_CLEAN "0") # evaluates true if the version control system was clean, otherwise false
 set(TARGET FRDM_K64F_GCC)
 set(TARGET_LIKE_FRDM_K64F_GCC TRUE)
 set(YOTTA_BUILD_INFO_HEADER "C:/development/cpp/mbed3/build/frdm-k64f-gcc/yotta_build_info.h")
@@ -95,6 +97,7 @@ add_definitions("${YOTTA_FORCE_INCLUDE_FLAG} \"C:/development/cpp/mbed3/build/fr
 # indirectly, including ourself)
 include_directories("C:/development/cpp/mbed3")
 include_directories("C:/development/cpp/mbed3/yotta_modules/mbed-drivers")
+include_directories("C:/development/cpp/mbed3/yotta_modules/sockets")
 include_directories("C:/development/cpp/mbed3/yotta_modules/mbed-hal")
 include_directories("C:/development/cpp/mbed3/yotta_modules/cmsis-core")
 include_directories("C:/development/cpp/mbed3/yotta_modules/ualloc")
@@ -111,10 +114,15 @@ include_directories("C:/development/cpp/mbed3/yotta_modules/cmsis-core-k64f")
 include_directories("C:/development/cpp/mbed3/yotta_modules/dlmalloc")
 include_directories("C:/development/cpp/mbed3/yotta_modules/minar-platform")
 include_directories("C:/development/cpp/mbed3/yotta_modules/minar-platform-mbed")
+include_directories("C:/development/cpp/mbed3/yotta_modules/sal")
+include_directories("C:/development/cpp/mbed3/yotta_modules/sal-stack-lwip")
+include_directories("C:/development/cpp/mbed3/yotta_modules/sal-driver-lwip-k64f-eth")
+include_directories("C:/development/cpp/mbed3/yotta_modules/sal-iface-eth")
 
 
 # recurse into dependencies that aren't built elsewhere
 add_subdirectory("C:/development/cpp/mbed3/build/frdm-k64f-gcc/ym/mbed-drivers" "C:/development/cpp/mbed3/build/frdm-k64f-gcc/ym/mbed-drivers")
+add_subdirectory("C:/development/cpp/mbed3/build/frdm-k64f-gcc/ym/sockets" "C:/development/cpp/mbed3/build/frdm-k64f-gcc/ym/sockets")
 
 
 
@@ -165,6 +173,14 @@ include_directories("C:/development/cpp/mbed3/yotta_modules/mbed-hal-k64f/mbed-h
 include_directories("C:/development/cpp/mbed3/yotta_modules/mbed-hal-k64f/mbed-hal-k64f/MK64F12")
 include_directories("C:/development/cpp/mbed3/yotta_modules/mbed-hal-frdm-k64f/mbed-hal-frdm-k64f")
 include_directories("C:/development/cpp/mbed3/yotta_modules/cmsis-core-k64f/cmsis-core-k64f")
+include_directories("C:/development/cpp/mbed3/yotta_modules/sal-stack-lwip/mbed-net-lwip")
+include_directories("C:/development/cpp/mbed3/yotta_modules/sal-stack-lwip/mbed-net-lwip/arch")
+include_directories("C:/development/cpp/mbed3/yotta_modules/sal-stack-lwip/mbed-net-lwip/lwip")
+include_directories("C:/development/cpp/mbed3/yotta_modules/sal-stack-lwip/mbed-net-lwip/lwip/include")
+include_directories("C:/development/cpp/mbed3/yotta_modules/sal-stack-lwip/mbed-net-lwip/lwip/include/ipv4")
+include_directories("C:/development/cpp/mbed3/yotta_modules/sal-stack-lwip/mbed-net-lwip/lwip/include/netif")
+include_directories("C:/development/cpp/mbed3/yotta_modules/sal-driver-lwip-k64f-eth/mbed-net-lwip-k64f")
+include_directories("C:/development/cpp/mbed3/yotta_modules/sal-iface-eth/sal-iface-eth")
 
 
 # modules with custom CMake build systems may append to the
@@ -186,6 +202,10 @@ set(YOTTA_MBED_DRIVERS_VERSION_STRING "0.8.1")
 set(YOTTA_MBED_DRIVERS_VERSION_MAJOR 0)
 set(YOTTA_MBED_DRIVERS_VERSION_MINOR 8)
 set(YOTTA_MBED_DRIVERS_VERSION_PATCH 1)
+set(YOTTA_SOCKETS_VERSION_STRING "0.3.5")
+set(YOTTA_SOCKETS_VERSION_MAJOR 0)
+set(YOTTA_SOCKETS_VERSION_MINOR 3)
+set(YOTTA_SOCKETS_VERSION_PATCH 5)
 set(YOTTA_MBED3_VERSION_STRING "0.0.0")
 set(YOTTA_MBED3_VERSION_MAJOR 0)
 set(YOTTA_MBED3_VERSION_MINOR 0)

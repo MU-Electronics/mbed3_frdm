@@ -1,0 +1,32 @@
+{
+  "name": "sockets",
+  "version": "0.3.5",
+  "description": "C++ Asynchronous Sockets Layer",
+  "keywords": [
+    "mbed",
+    "network",
+    "sockets"
+  ],
+  "author": "brendan.moran@arm.com",
+  "licenses": [
+    {
+      "url": "https://spdx.org/licenses/Apache-2.0",
+      "type": "Apache-2.0"
+    }
+  ],
+  "dependencies": {
+    "sal": "~0.2.1",
+    "core-util": "~0.1.2",
+    "minar": "~0.7.0"
+  },
+  "scripts": {
+    "testReporter": [
+      "mbedgt",
+      "--digest",
+      "stdin",
+      "-v",
+      "-V"
+    ]
+  },
+  "targetDependencies": {}
+}

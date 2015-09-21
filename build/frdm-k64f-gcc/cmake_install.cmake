@@ -30,6 +30,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("C:/development/cpp/mbed3/build/frdm-k64f-gcc/ym/mbed-drivers/cmake_install.cmake")
+  include("C:/development/cpp/mbed3/build/frdm-k64f-gcc/ym/sockets/cmake_install.cmake")
   include("C:/development/cpp/mbed3/build/frdm-k64f-gcc/source/cmake_install.cmake")
 
 endif()

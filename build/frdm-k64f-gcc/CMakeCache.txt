@@ -331,6 +331,51 @@ minar_LIB_DEPENDS:STATIC=general;compiler-polyfill;general;minar-platform;genera
 minar_SOURCE_DIR:STATIC=C:/development/cpp/mbed3/build/frdm-k64f-gcc/ym/minar
 
 //Value Computed by CMake
+sal-driver-lwip-k64f-eth_BINARY_DIR:STATIC=C:/development/cpp/mbed3/build/frdm-k64f-gcc/ym/sal-driver-lwip-k64f-eth
+
+//Dependencies for the target
+sal-driver-lwip-k64f-eth_LIB_DEPENDS:STATIC=general;sal-stack-lwip;general;sal-iface-eth;
+
+//Value Computed by CMake
+sal-driver-lwip-k64f-eth_SOURCE_DIR:STATIC=C:/development/cpp/mbed3/build/frdm-k64f-gcc/ym/sal-driver-lwip-k64f-eth
+
+//Value Computed by CMake
+sal-iface-eth_BINARY_DIR:STATIC=C:/development/cpp/mbed3/build/frdm-k64f-gcc/ym/sal-iface-eth
+
+//Dependencies for the target
+sal-iface-eth_LIB_DEPENDS:STATIC=general;mbed-drivers;general;sal-stack-lwip;
+
+//Value Computed by CMake
+sal-iface-eth_SOURCE_DIR:STATIC=C:/development/cpp/mbed3/build/frdm-k64f-gcc/ym/sal-iface-eth
+
+//Value Computed by CMake
+sal-stack-lwip_BINARY_DIR:STATIC=C:/development/cpp/mbed3/build/frdm-k64f-gcc/ym/sal-stack-lwip
+
+//Dependencies for the target
+sal-stack-lwip_LIB_DEPENDS:STATIC=general;sal;general;sal-driver-lwip-k64f-eth;general;sal-iface-eth;general;mbed-drivers;
+
+//Value Computed by CMake
+sal-stack-lwip_SOURCE_DIR:STATIC=C:/development/cpp/mbed3/build/frdm-k64f-gcc/ym/sal-stack-lwip
+
+//Value Computed by CMake
+sal_BINARY_DIR:STATIC=C:/development/cpp/mbed3/build/frdm-k64f-gcc/ym/sal
+
+//Dependencies for the target
+sal_LIB_DEPENDS:STATIC=general;sal-stack-lwip;
+
+//Value Computed by CMake
+sal_SOURCE_DIR:STATIC=C:/development/cpp/mbed3/build/frdm-k64f-gcc/ym/sal
+
+//Value Computed by CMake
+sockets_BINARY_DIR:STATIC=C:/development/cpp/mbed3/build/frdm-k64f-gcc/ym/sockets
+
+//Dependencies for the target
+sockets_LIB_DEPENDS:STATIC=general;sal;general;core-util;general;minar;
+
+//Value Computed by CMake
+sockets_SOURCE_DIR:STATIC=C:/development/cpp/mbed3/build/frdm-k64f-gcc/ym/sockets
+
+//Value Computed by CMake
 ualloc_BINARY_DIR:STATIC=C:/development/cpp/mbed3/build/frdm-k64f-gcc/ym/ualloc
 
 //Dependencies for the target
@@ -442,7 +487,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=42
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=55
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
