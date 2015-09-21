@@ -1,10 +1,23 @@
+// Include mbed
+#include "mbed/mbed.h"
 
+// Set the output
+DigitalOut output(LED3); //D0
 
+// Pulse the output
+static void pulse(void) {
+    output = !output;
+}
 
-
-
-
-
+/**
+ * Main app method
+ *
+ * @author Sam Mottley
+ */
+void app_start(int, char**) {
+    // Attach the pulse method to the internal scheduler
+    minar::Scheduler::postCallback(pulse).period(minar::milliseconds(500));
+}
 
 
 //#include "mbed/mbed.h"
